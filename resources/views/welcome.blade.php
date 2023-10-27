@@ -217,7 +217,7 @@ function copyToClipboard() {
         alert.classList.remove('hidden'); // Show the alert
 
         setTimeout(function() {
-            alert.style.display = "none"; // Hide the alert after 5 seconds
+            alert.style.display = "none"; // Hide thert after 5 seconds
         }, 3000);
     }
 });
