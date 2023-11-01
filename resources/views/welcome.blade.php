@@ -166,7 +166,7 @@ function copyToClipboard() {
       
       <div class="my-3">
       @csrf  
-          <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describe Your Query</label>
+          <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describe Your English Query</label>
           <textarea autofocus id="text" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-purple-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="For example: all boys from the table students" required ></textarea>
        <label id="empty-query" style="display:none" class="text-red-500" for="text">This is a required field*</label>
         </div>
