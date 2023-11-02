@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="style.css">
     <title>Convert Text2SQL</title>
-    @vite('resources/css/app.css')s
+    @vite('resources/css/app.css')
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function (){
