@@ -46,7 +46,7 @@ Route::get('/buy', function (Request $request) {
     $checkout = $request->user()->checkout('136778');
 
     return view('billing', ['checkout' => $checkout]);
-});
+})->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
 
 Route::get('/resume', function (Request $request) {
     return $request->user()->checkout('141650')
