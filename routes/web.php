@@ -33,7 +33,8 @@ Route::get('/privacy', function () {
 
 
 Route::get('/dashboard', function (Request $request) {
-    return $request->user()->redirectToCustomerPortal();
+    $customerPortal = $user->customerPortalUrl();
+    return view('subscribe', ['checkout' => $customerPortal]);
 })->middleware(['auth','customer','verified'])->name('dashboard');
 // Route::get('/buy', function (Request $request) {
 //     return $request->user()->checkout('136778')
@@ -45,7 +46,7 @@ Route::get('/dashboard', function (Request $request) {
 Route::get('/buy', function (Request $request) {
     $checkout = $request->user()->checkout('136778')->redirectTo(url('/'));
    $checkout=$checkout->url();
-    return view('billing', ['checkout' => $checkout]);
+    return view('subscribe', ['checkout' => $checkout]);
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
 
 Route::get('/resume', function (Request $request) {
