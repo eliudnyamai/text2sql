@@ -82,7 +82,7 @@
        // return data.sql; // Return the converted SQL
     } catch (error) {
         console.error("Error:", error);
-        return null; // Handle the error and return null or an appropriate value    
+        return null; // Hande the error and return null or an appropriate value    
 }
     }
     else{
