@@ -33,8 +33,8 @@ Route::get('/privacy', function () {
 
 
 Route::get('/dashboard', function (Request $request) {
-    $customerPortal = $user->customerPortalUrl();
-    return view('subscribe', ['checkout' => $customerPortal]);
+    $customerPortal = $request->user()->customerPortalUrl();
+    return view('subscribe', ['customerPortal' => $customerPortal]);
 })->middleware(['auth','customer','verified'])->name('dashboard');
 // Route::get('/buy', function (Request $request) {
 //     return $request->user()->checkout('136778')
