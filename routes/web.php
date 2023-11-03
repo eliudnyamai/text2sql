@@ -30,6 +30,9 @@ Route::get('/refund', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 });
+Route::get('/thanks', function () {
+    return view('thanks');
+});
 
 
 Route::get('/dashboard', function (Request $request) {
