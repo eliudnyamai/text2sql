@@ -67,7 +67,7 @@ Route::get('/update-payment-info', function (Request $request) {
 // });
 Route::middleware('auth')->group(function () {
    
-    Route::post('/convert-sql', [SQLConversionController::class, 'convert'])->middleware(isSubscribed::class)->name('convert');
+    Route::post('/convert-sql', [SQLConversionController::class, 'convert'])->middleware(IsSubscribed::class)->name('convert');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
