@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\SQLConversionController;
-use App\Http\Middleware\isSubscribed;
+use App\Http\Middleware\IsSubscribed;
 use Illuminate\Support\Facades\Auth;
 
 /*
