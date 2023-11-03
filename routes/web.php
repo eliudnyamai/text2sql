@@ -35,11 +35,18 @@ Route::get('/privacy', function () {
 Route::get('/dashboard', function (Request $request) {
     return $request->user()->redirectToCustomerPortal();
 })->middleware(['auth','customer','verified'])->name('dashboard');
+// Route::get('/buy', function (Request $request) {
+//     return $request->user()->checkout('136778')
+//     ->withEmail($request->user()->email)
+//     ->redirectTo(url('/'));
+// })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
+// use Illuminate\Http\Request;
+ 
 Route::get('/buy', function (Request $request) {
-    return $request->user()->checkout('136778')
-    ->withEmail($request->user()->email)
-    ->redirectTo(url('/'));
-})->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
+    $checkout = $request->user()->checkout('136778');
+
+    return view('billing', ['checkout' => $checkout]);
+});
 
 Route::get('/resume', function (Request $request) {
     return $request->user()->checkout('141650')

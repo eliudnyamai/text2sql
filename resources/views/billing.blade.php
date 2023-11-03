@@ -13,23 +13,14 @@
                         To update your payment information, click the button below:
                     </p>
 
-                    <a href="{{ $paymentMethodUrl }}" class="btn btn-primary">
-                        Update Payment Information
-                    </a>
+                    <x-lemon-button :href="$checkout" class="px-8 py-4">
+    Buy Product
+</x-lemon-button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<p>8888888888888888888888</p>
-<script defer>
-    function updatePM() {
-        LemonSqueezy.Url.Open('{!! $paymentMethodUrl !!}');
-    }
-</script>
 
-<button onclick="updatePM()">
-    Update payment method
-</button>
 </x-guest-layout>
 

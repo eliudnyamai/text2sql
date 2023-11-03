@@ -96,6 +96,7 @@ function copyToClipboard() {
         document.execCommand('copy');
     }
 </script>
+@lemonJS
 </head>
 <body>
   <header>
