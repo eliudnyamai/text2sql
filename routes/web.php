@@ -43,9 +43,8 @@ Route::get('/dashboard', function (Request $request) {
 // use Illuminate\Http\Request;
  
 Route::get('/buy', function (Request $request) {
-    $checkout = $request->user()->checkout('136778');
+    $checkout = $request->user()->checkout('136778')->redirectTo(url('/'));
    $checkout=$checkout->url();
-
     return view('billing', ['checkout' => $checkout]);
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
 
