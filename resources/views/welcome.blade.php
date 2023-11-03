@@ -145,7 +145,7 @@ function copyToClipboard() {
     <p>You Are Already Subscribed</p>
 </div>
 @endif
-      <main class="mx-auto p-7 rounded-lg border-solid border-2 dark:borderblack border-purple-700 w-96 ">
+      <main class="mx-auto p-7 rounded-lg border-solid border-2 dark:borderblack border-purple-700 w-5/6">
       <div style="display:none" id="error-div" class="relative rounded-lg bg-red-500 text-white p-4">
   <div class="flex items-center justify-between">
     <div class="flex items-center space-x-4">
@@ -173,7 +173,7 @@ function copyToClipboard() {
         </div>
           <div class="text-center ">
           @if (auth()->check())
-          <button id="conertButton" type="submit" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">CONVERT</button>
+          <button id="convertButton" type="submit" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">CONVERT</button>
 @else
 <a href="{{ route('login') }}" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log In</a>
 @endif
