@@ -12,10 +12,10 @@
                     <p>
                         To update your payment information, click the button below:
                     </p>
-
-                    <x-lemon-button :href="$checkout" class="px-8 py-4">
+<p><a href={{$checkout}} target="_blank" rel="noopener noreferrer">buy</a> </p>
+                    <!-- <x-lemon-button :href="$checkout" class="px-8 py-4">
     Buy Product
-</x-lemon-button>
+</x-lemon-button> -->
                 </div>
             </div>
         </div>
