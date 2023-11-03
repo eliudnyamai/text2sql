@@ -44,7 +44,7 @@ Route::get('/dashboard', function (Request $request) {
 // use Illuminate\Http\Request;
  
 Route::get('/buy', function (Request $request) {
-    $checkout = $request->user()->checkout('136778')->redirectTo(url('/'));
+    $checkout = $request->user()->checkout('136778')->redirectTo(url('/thanks'));
    $checkout=$checkout->url();
     return view('subscribe', ['checkout' => $checkout]);
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
@@ -52,7 +52,7 @@ Route::get('/buy', function (Request $request) {
 Route::get('/resume', function (Request $request) {
     return $request->user()->checkout('141650')
     ->withEmail(Auth::user()->email)
-    ->redirectTo(url('/'));
+    ->redirectTo(url('/thanks'));
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('resume');
 
 Route::get('/update-payment-info', function (Request $request) {
