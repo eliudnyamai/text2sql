@@ -53,9 +53,9 @@ Route::get('/buy', function (Request $request) {
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
 
 Route::get('/resume', function (Request $request) {
-    return $request->user()->checkout('141650')
-    ->withEmail(Auth::user()->email)
-    ->redirectTo(url('/thanks'));
+    $checkout = $request->user()->checkout('141650')->redirectTo(url('/thanks'));
+    $checkout=$checkout->url();
+     return view('resume', ['checkout' => $checkout]);
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('resume');
 
 Route::get('/update-payment-info', function (Request $request) {
