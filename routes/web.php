@@ -37,7 +37,7 @@ Route::get('/thanks', function () {
 
 Route::get('/dashboard', function (Request $request) {
     $customerPortal = $request->user()->customerPortalUrl();
-    return view('subscribe', ['customerPortal' => $customerPortal]);
+    return view('customer', ['customerPortal' => $customerPortal]);
 })->middleware(['auth','customer','verified'])->name('dashboard');
 // Route::get('/buy', function (Request $request) {
 //     return $request->user()->checkout('136778')
