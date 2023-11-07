@@ -92,9 +92,17 @@
 }
 });
 function copyToClipboard() {
-        document.getElementById("sql-result").select();
-        document.execCommand('copy');
+    document.getElementById("sql-result").select();
+    document.execCommand('copy');
+    
+    // Change the value of the button with ID "copy"
+    var copyButton = document.getElementById("copy");
+    if (copyButton) {
+        copyButton.value = "Copied!!";
     }
+}
+
+
 </script>
 @lemonJS
 </head>
