@@ -8,15 +8,15 @@
             <div class="card">
                 <div class="card-header">Billing Information</div>
 
-                <div class="card-body">
-                    <p>
-                        To update your payment information, click the button below:
-                    </p>
-<p><a href={{$checkout}} target="_blank" rel="noopener noreferrer">buy</a> </p>
-                    <!-- <x-lemon-button :href="$checkout" class="px-8 py-4">
-    Buy Product
-</x-lemon-button> -->
-                </div>
+                <script defer>
+    function updatePM() {
+        LemonSqueezy.Url.Open('{!! $paymentMethodUrl !!}');
+    }
+</script>
+
+<button onclick="updatePM()">
+    Update payment method
+</button>
             </div>
         </div>
     </div>
