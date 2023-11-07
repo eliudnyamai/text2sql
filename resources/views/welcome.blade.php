@@ -45,7 +45,7 @@
             error_text.innerHTML="You have not subscribed.";
             var alert_btn=document.getElementById('alert-btn');
             alert_btn.innerHTML='<a href="{{ route("buy") }}"><button class="bg-white hover:bg-gray-500 text-red-500 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-red-300">SUBSCRIBE</button> </a>'
-         
+            this.innerText="CONVERT";
 
           }
         if (!data.success&&data.code==2) {
@@ -55,7 +55,7 @@
             error_text.innerHTML="You have not subscribed."
             var alert_btn=document.getElementById('alert-btn');
             alert_btn.innerHTML='<a href="{{ route("buy") }}"><button class="bg-white hover:bg-gray-500 text-red-500 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-red-300">SUBSCRIBE</button> </a>'
-         
+            this.innerText="CONVERT";
           }
         if (!data.success&&data.code==3) {
           var error_div=document.getElementById('error-div');
@@ -64,7 +64,7 @@
             error_text.innerHTML="You Cancelled Subscription.";
             var alert_btn=document.getElementById('alert-btn');
             alert_btn.innerHTML='<a href="{{ route("resume") }}"><button class="bg-white hover:bg-gray-500 text-red-500 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-red-300">RESUME</button> </a>'
-         
+            this.innerText="CONVERT";
           }
         if (!data.success&&data.code==4) {
           var error_div=document.getElementById('error-div');
@@ -73,14 +73,17 @@
             error_text.innerHTML="Your Subscription Is Unpaid."
             var alert_btn=document.getElementById('alert-btn');
             alert_btn.innerHTML='<a href="{{ route("dashboard") }}"><button class="bg-white hover:bg-gray-500 text-red-500 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-red-300">UPDATE PAYMENT INFO</button> </a>'
+            this.innerText="CONVERT";
           }
         if (!data.success&&data.code==5) {
             var error_div=document.getElementById('error-div');
             error_div.style.display="block";
             var error_text=document.getElementById('error-text');
             error_text.innerHTML="You are not logged in. Please <button><a href='{{ url('/login')}}'>LOG IN</a></button>"
-        }
+            this.innerText="CONVERTING";
+          }
         document.getElementById('sql-result').innerHTML=data.sql;
+        this.innerText="CONVERT";
        // return data.sql; // Return the converted SQL
     } catch (error) {
         console.error("Error:", error);
