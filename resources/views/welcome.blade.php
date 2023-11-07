@@ -157,7 +157,7 @@ function copyToClipboard() {
     <p>You Are Already Subscribed</p>
 </div>
 @endif
-      <main class="mx-auto p-7 rounded-lg border-solid border-2 dark:borderblack border-purple-700 w-5/6">
+      <main class="mx-auto p-7 rounded-lg border-solid border-2 dark:borderblack border-purple-700 w-full">
       <div style="display:none" id="error-div" class="relative rounded-lg bg-red-500 text-white p-4">
   <div class="flex items-center justify-between">
     <div class="flex items-center space-x-4">
