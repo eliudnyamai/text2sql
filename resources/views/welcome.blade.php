@@ -14,6 +14,7 @@
 
     async function updateData(event){
       event.preventDefault();
+      this.innerText="CONVERTING";
       var formValid = document.forms["form"].checkValidity();
       var text=document.getElementById('text').value;
       const requestData = {
@@ -22,6 +23,7 @@
     if(formValid){
       $('#empty-query').hide(); 
     try {
+
         const response = await fetch("{{ url('/convert-sql')}}", {
             method: "POST",
             headers: {
