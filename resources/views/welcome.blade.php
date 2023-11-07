@@ -90,13 +90,11 @@
       $('#empty-query').show(); 
     }
 }
+});
 function copyToClipboard() {
         document.getElementById("sql-result").select();
         document.execCommand('copy');
-        document.getElementById('copy').value="COPIED!"
     }
-});
-
 </script>
 @lemonJS
 </head>
