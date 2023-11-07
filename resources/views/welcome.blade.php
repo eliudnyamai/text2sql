@@ -98,7 +98,10 @@ function copyToClipboard() {
     // Change the value of the button with ID "copy"
     var copyButton = document.getElementById("copy");
     if (copyButton) {
+      setTimeout(() => {
         copyButton.innerText= "Copied!!";
+      }, 1000);
+        
     }
 }
 
