@@ -48,6 +48,7 @@ Route::get('/dashboard', function (Request $request) {
  
 Route::get('/buy', function (Request $request) {
     $checkout = $request->user()->checkout('150237')->redirectTo(url('/thanks'));
+    dd($checkout);
    $checkout=$checkout->url();
     return view('subscribe', ['checkout' => $checkout]);
 })->middleware(['auth', 'not-subscribed', 'verified'])->name('buy');
