@@ -10,7 +10,7 @@ class SQLConversionController extends Controller
     public function convert(Request $request)
     {
         $sql_query = trim($request->input('sql_query'));
-        $OPENAI_API_KEY = "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";
+        $OPENAI_API_KEY = "";
 
         $response = Http::withHeaders([
             "Authorization" => "Bearer $OPENAI_API_KEY",
